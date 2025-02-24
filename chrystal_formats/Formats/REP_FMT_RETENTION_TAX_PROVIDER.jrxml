@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.1.final using JasperReports Library version 6.2.1  -->
+<!-- 2025-02-24T15:19:17 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="REP_FMT_RETENTION_TAX_PROVIDER" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="03098ba5-b171-474d-8d32-0fe6462ac0a2">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="32"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="P_INITIAL_DATE" class="java.util.Date" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new Date(0)]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_FINAL_DATE" class="java.util.Date" isForPrompting="false">
+		<defaultValueExpression><![CDATA[new Date()]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_INITIAL_DOCUMENT" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_FINAL_DOCUMENT" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["ZZZZZZZZZZ"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_USER" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\roberto\\Desktop\\InterData\\InterData\\Reportes\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_PATH_REPORTS" class="java.lang.String"/>
+	<parameter name="P_LIST_DOCUMENTS" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_COMPANY_NAME" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_COMPANY_ID" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_INITIAL_PROVIDER" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_FINAL_PROVIDER" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["ZZZZZZZZZZ"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_LIST_PROVIDERS" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_SELLER" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<parameter name="P_COMPANY_ADDRESS" class="java.lang.String"/>
+	<parameter name="P_PATTERN_NUMBER" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="P_COMPANY_PHONE" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[""]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT
+    K.*
+FROM  rep_fmt_retention_tax_provider(
+
+$P{P_INITIAL_DATE},
+$P{P_FINAL_DATE},
+$P{P_INITIAL_DOCUMENT},
+$P{P_FINAL_DOCUMENT},
+$P{P_LIST_DOCUMENTS},
+$P{P_INITIAL_PROVIDER},
+$P{P_FINAL_PROVIDER},
+$P{P_LIST_PROVIDERS},
+$P{P_USER}) K]]>
+	</queryString>
+	<field name="document_no" class="java.lang.String"/>
+	<field name="emission_date" class="java.sql.Date"/>
+	<field name="provider_code" class="java.lang.String"/>
+	<field name="provider_name" class="java.lang.String"/>
+	<field name="provider_id" class="java.lang.String"/>
+	<field name="provider_address" class="java.lang.String"/>
+	<field name="provider_phone" class="java.lang.String"/>
+	<field name="correlative" class="java.lang.Integer"/>
+	<variable name="percent_discount_SUM" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[]]></variableExpression>
+	</variable>
+	<group name="sdf" isStartNewPage="true">
+		<groupExpression><![CDATA[$F{correlative}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="305">
+			<rectangle>
+				<reportElement x="15" y="157" width="723" height="70" uuid="18cb5623-6894-479c-9ab6-656052a140ad"/>
+			</rectangle>
+			<textField>
+				<reportElement x="368" y="177" width="150" height="15" uuid="e3bf07fe-d90f-4cdf-8dbd-826b410cb2c7"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_COMPANY_ID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="49" width="584" height="14" uuid="31c01a14-f347-4575-bb67-d75e62e69fee"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Ley IVA - Articulo 11 : " Serán responsables del pago del impuesto en calidad de agentes de retención, los compradores]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="293" y="101" width="173" height="49" uuid="cc11ee3a-b343-4b43-a7d4-4d3af51a969b"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="17" y="101" width="173" height="49" uuid="144d2858-7002-4cec-af1c-0e7ccac0ff5e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="11" y="63" width="688" height="14" uuid="b9c13bb8-d788-4462-88f2-94d48aea7c29"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[o adquirientes de determinados bienes muebles y los receptores de ciertos servicios a quienes la Administracion Tributaria designe como tal ".]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="106" width="134" height="14" uuid="8177d152-4b71-4018-a797-b6922739ba0e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NRO COMPROBANTE:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="536" y="101" width="173" height="49" uuid="656106b8-e5a8-4b31-a910-fbcb7674bbce"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="302" y="106" width="154" height="14" uuid="a730e159-4fa3-4bfc-a18e-241bedcfe99c"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="542" y="106" width="148" height="14" uuid="6cd08bf6-48f3-467f-b693-5ebf38a2ed99"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PERIODO FISCAL:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="162" width="320" height="14" uuid="5d8846d8-b8c2-4f7d-8c11-4d8b9462e5ec"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE O RAZÓN SOCIAL DEL AGENTE DE RETENCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="28" y="192" width="320" height="14" uuid="e4db6aaf-1ba6-403c-8ae4-3d40bd36bb9f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECCIÓN FISCAL DEL AGENTE DE RETENCIÓN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="162" width="360" height="14" uuid="fd957eee-2f79-49fe-a902-6b5bc567f539"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REGISTRO DE INFORMACION FISCAL DEL AGENTE DE RETENCION]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="542" y="125" width="31" height="14" uuid="fa7d1141-afa9-4a90-b5ac-a021f04b84d4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AÑO: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="628" y="125" width="31" height="14" uuid="d4c8828e-e9d1-4afc-a46c-c266da294e13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MES: ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="28" y="177" width="320" height="15" uuid="83f330ae-eecf-4fd0-aa7a-21641985fdec"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_COMPANY_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="11" y="12" width="727" height="25" uuid="6b5a390a-7e5d-4756-bb04-070097b624aa"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROBANTE DE RETENCION DE IMPUESTO AL VALOR AGREGADO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="15" y="237" width="723" height="68" uuid="89dec101-9208-42a9-bc47-e21619c25d29"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="237" width="320" height="14" uuid="a6570ce1-d85f-4849-8542-a0d10efd06f8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE O RAZÓN SOCIAL DEL SUJETO RETENIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="368" y="237" width="360" height="14" uuid="4dc526a6-4f1d-43e1-85a9-5cefdb5ea1e6"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[REGISTRO DE INFORMACION FISCAL DEL SUJETO RETENIDO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="265" width="318" height="14" uuid="54822d67-817c-4df9-a9fe-1359e403f028"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DIRECCIÓN FISCAL DEL SUJETO RETENIDO]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="27" y="124" width="134" height="14" uuid="8f6b8140-6430-4794-b4a9-5bd77ccf84ab"/>
+				<textFieldExpression><![CDATA[$F{document_no}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="302" y="124" width="154" height="15" uuid="7e290c42-00b3-46da-9566-c74916c4e5e6"/>
+				<textFieldExpression><![CDATA[$F{emission_date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="251" width="318" height="14" uuid="450456c7-43b0-41d3-8b28-f4ac4fd1eb34"/>
+				<textFieldExpression><![CDATA[$F{provider_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="368" y="251" width="143" height="14" uuid="182c96ef-e7d1-45b8-97c7-381a5ae2d43a"/>
+				<textFieldExpression><![CDATA[$F{provider_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="30" y="279" width="698" height="14" uuid="492e0c80-8269-4ca8-8e1c-5473a3022c17"/>
+				<textFieldExpression><![CDATA[$F{provider_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="28" y="206" width="700" height="14" uuid="473ea656-feff-4b25-80b3-a727db41a893"/>
+				<textFieldExpression><![CDATA[$P{P_COMPANY_ADDRESS}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="574" y="125" width="46" height="15" uuid="e00d7397-94e2-4c60-9204-fb3798f36fad">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{emission_date}.toString().substring(0,4)]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="659" y="125" width="46" height="15" uuid="ba089536-a39e-4ee7-b9b3-eb455e60d091">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{emission_date}.toString().substring(5,7)]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="32" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="752" height="28" uuid="afc4b9a5-1ae2-442b-9dec-eb491c3a6f0b"/>
+				<subreportParameter name="P_MAIN_CORRELATIVE">
+					<subreportParameterExpression><![CDATA[$F{correlative}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="P_PATTERN_NUMBER">
+					<subreportParameterExpression><![CDATA[$P{P_PATTERN_NUMBER}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{P_PATH_REPORTS}  +"//" + "REP_FMT_RETENTION_TAX_PROVIDER_DETAILS.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="50" splitType="Stretch">
+			<rectangle>
+				<reportElement x="368" y="0" width="370" height="50" uuid="2e5c8bf7-444c-4acb-abe0-22346dbd66d2"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="383" y="7" width="304" height="14" uuid="a656a533-b4bf-4da2-9ffd-8f00a796d6c1"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sujeto retenido:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="383" y="21" width="304" height="11" uuid="14c7e00e-ac4c-4daa-a03b-bddf7799fb9e"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{provider_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="383" y="31" width="304" height="11" uuid="490fba54-b137-4817-8610-6ea6781ac249"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{provider_id}]]></textFieldExpression>
+			</textField>
+			<elementGroup/>
+			<rectangle>
+				<reportElement x="15" y="0" width="342" height="50" uuid="d3a71d5c-7df7-49c1-9801-10832d7c7263"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="28" y="7" width="307" height="14" uuid="e98fa188-ace1-45f9-a96d-0cc1c1ea8c93"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Agente de Retención:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="28" y="31" width="307" height="11" uuid="59891c9b-7bac-4eca-800e-ff34c2390879"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_COMPANY_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="28" y="21" width="307" height="11" uuid="866dc66d-ec86-4a19-b911-89d7785f2713"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{P_COMPANY_NAME}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
