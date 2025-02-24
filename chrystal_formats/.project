@@ -9,4 +9,36 @@
 	<natures>
 		<nature>org.jkiss.dbeaver.DBeaverNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Formats/REP_FMT_SHOPPING_OPERATION2_BILL.jasper</name>
+			<type>1</type>
+			<location>//C:/Users/gilbe/git/chrystal_formats/chrystal_formats/Formats/REP_FMT_SHOPPING_OPERATION2_BILL.jasper</location>
+		</link>
+		<link>
+			<name>Formats/REP_FMT_SHOPPING_OPERATION2_BILL.jrxml</name>
+			<type>1</type>
+			<location>//C:/Users/gilbe/git/chrystal_formats/chrystal_formats/Formats/REP_FMT_SHOPPING_OPERATION2_BILL.jrxml</location>
+		</link>
+		<link>
+			<name>Formats/REP_FMT_SHOPPING_OPERATION_BILL.jasper</name>
+			<type>1</type>
+			<location>//C:/Users/gilbe/git/chrystal_formats/chrystal_formats/Formats/REP_FMT_SHOPPING_OPERATION_BILL.jasper</location>
+		</link>
+		<link>
+			<name>Formats/REP_FMT_SHOPPING_OPERATION_BILL.jrxml</name>
+			<type>1</type>
+			<location>//C:/Users/gilbe/git/chrystal_formats/chrystal_formats/Formats/REP_FMT_SHOPPING_OPERATION_BILL.jrxml</location>
+		</link>
+		<link>
+			<name>Formats/REP_FMT_SHOPPING_OPERATION_DETAILS_BILL.jasper</name>
+			<type>1</type>
+			<location>//C:/Users/gilbe/git/chrystal_formats/chrystal_formats/Formats/REP_FMT_SHOPPING_OPERATION_DETAILS_BILL.jasper</location>
+		</link>
+		<link>
+			<name>Formats/REP_FMT_SHOPPING_OPERATION_DETAILS_BILL.jrxml</name>
+			<type>1</type>
+			<location>//C:/Users/gilbe/git/chrystal_formats/chrystal_formats/Formats/REP_FMT_SHOPPING_OPERATION_DETAILS_BILL.jrxml</location>
+		</link>
+	</linkedResources>
 </projectDescription>
