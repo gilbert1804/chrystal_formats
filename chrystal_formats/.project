@@ -60,5 +60,15 @@
 			<type>1</type>
 			<location>//C:/Users/gilbe/git/chrystal_formats/chrystal_formats/Scripts/004 Ajuste Inventario.sql</location>
 		</link>
+		<link>
+			<name>Scripts/Funcion Operaciones de Inventario 01.sql</name>
+			<type>1</type>
+			<location>//C:/Users/gilbe/git/chrystal_formats/chrystal_formats/Scripts/Funcion Operaciones de Inventario 01.sql</location>
+		</link>
+		<link>
+			<name>Scripts/Funcion Operaciones de Inventario 02.sql</name>
+			<type>1</type>
+			<location>//C:/Users/gilbe/git/chrystal_formats/chrystal_formats/Scripts/Funcion Operaciones de Inventario 02.sql</location>
+		</link>
 	</linkedResources>
 </projectDescription>
